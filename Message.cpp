@@ -26,30 +26,22 @@ Message::Message(string s, string r){
 
 
 void Message::append(string m){
-	//complete this code.
-
+	message.append(" " + m);
 }
 
 void Message::print(){
-	//complete this code.
-	//Call the to_string function here.
-	//Tip: use the scope resolution operator "::" when you call the Message to_string function,
-	//e.g. Message::to_string(). If you don't tell the compiler you want to use the Message to_string function
-	//it will try to call the std to_string function which will give a compilation error.
-
+	cout << Message::to_string() << endl;
 
 }
 
 string Message::to_string(){
-	string theMessage = "";
-	//finish formatting and building theMessage string appropriately before returning it.
+	string theMessage = "From: " + sender + "\n" + "To: " + recipient + "\n" + "Message: " + message + "\n" + "Timestamp: " + stamp.to_string();
 
 	return theMessage;
 }
 
 
 void Message::setTime(Time& t){
-	//complete this code.
-
+	stamp = t;
 }
 
